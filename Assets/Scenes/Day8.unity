@@ -748,8 +748,8 @@ GameObject:
   - component: {fileID: 1559594948}
   - component: {fileID: 1559594947}
   - component: {fileID: 1559594946}
-  - component: {fileID: 1559594945}
   - component: {fileID: 1559594951}
+  - component: {fileID: 1559594952}
   m_Layer: 0
   m_Name: Player _final
   m_TagString: Untagged
@@ -757,21 +757,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1559594945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559594944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6fd70a9277c1ec4cb3a8979a4d22bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Day8.PlayerMovement
-  normalSpeed: 2
-  sprintSpeed: 10
-  rotationSpeed: 5
 --- !u!54 &1559594946
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -907,6 +892,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c012ab3441efaa749ae0d8d8c541f98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDemo
+--- !u!114 &1559594952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559594944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fd70a9277c1ec4cb3a8979a4d22bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Day8.PlayerMovement
+  normalSpeed: 2
+  sprintSpeed: 10
+  rotationSpeed: 10
 --- !u!1 &2090243926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -2,65 +2,51 @@ using UnityEngine;
 
 public class CollisionDemo : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-   /* private void OnCollisionEnter(Collision collision)
-   {
-       Debug.Log("Collision with: " + collision.gameObject.name);
-   }*/
-
-    /*    private void OnCollisionEnter(Collision collision)
-        {
-        if (collision.gameObject.CompareTag("Box"))
-        {
-            Debug.Log("Player touched the Box!");
-                        Debug.Log("Object: " +
-                collision.gameObject.name);
-
-            Debug.Log("Contact Count: " +
-                collision.contactCount);
-
-        }
-                }*/
-       private void OnCollisionEnter(Collision collision)
-        {
-            Debug.Log("CollisionEnter with: " + collision.gameObject.name);
-            if (collision.gameObject.CompareTag("Box"))
+   
+        private void OnCollisionEnter(Collision collision)
             {
-                Rigidbody boxRb =
-                    collision.gameObject.GetComponent<Rigidbody>();
+              //  Debug.Log("Collision with: " + collision.gameObject.name);
 
-                boxRb.AddForce(
-                    transform.forward * 5f,
-                    ForceMode.Impulse
-                );
+                if (collision.gameObject.CompareTag("Box"))
+                {
+                  //  Debug.Log("BOX FOUND!");
+
+                    Rigidbody boxRb =
+                        collision.gameObject.GetComponent<Rigidbody>();
+
+                  //  Debug.Log("Box Rigidbody: " + boxRb);
+
+                    boxRb.AddForce(
+                        transform.forward * 5f,
+                        ForceMode.Impulse
+                    );
+
+                 //   Debug.Log("FORCE APPLIED!");
+                }
             }
-        }
-
-        private void OnCollisionStay(Collision collision)
-        {
-             Debug.Log("CollisionStay with: " + collision.gameObject.name);
-            if (collision.gameObject.CompareTag("Box"))
+      private void OnCollisionStay(Collision collision)
             {
-                Rigidbody boxRb =
-                    collision.gameObject.GetComponent<Rigidbody>();
+                if (collision.gameObject.CompareTag("Box"))
+                {
+                    Debug.Log("Player staying with Box");
 
-                boxRb.AddForce(
-                    transform.forward * 5f,
-                    ForceMode.Force
-                );
+                    Rigidbody boxRb =
+                        collision.gameObject.GetComponent<Rigidbody>();
+
+                    boxRb.AddForce(
+                        transform.forward * 5f,
+                        ForceMode.Force
+                    );
+                }
             }
-        }
+
+            private void OnCollisionExit(Collision collision)
+            {
+                if (collision.gameObject.CompareTag("Box"))
+                {
+                    Debug.Log("Player exited Box");
+                }
+            }
 
 
 
