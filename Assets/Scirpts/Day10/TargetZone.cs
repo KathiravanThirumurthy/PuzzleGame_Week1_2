@@ -13,6 +13,7 @@ public class TargetZone : MonoBehaviour
         if (other.CompareTag("Box"))
         {
             puzzleManager.PuzzleCompleted();
+            Destroy(gameObject);
         }
     }
 }

@@ -20,8 +20,7 @@ public class BoxPush : MonoBehaviour
         if (!collision.gameObject.CompareTag("Player"))
             return;
 
-        Vector3 direction =
-            transform.position - collision.transform.position;
+        Vector3 direction = transform.position - collision.transform.position;
 
         direction.y = 0;
 

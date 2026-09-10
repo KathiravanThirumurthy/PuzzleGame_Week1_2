@@ -1,10 +1,11 @@
 using UnityEngine;
 
-namespace Day8
+namespace Day10
 {
-    public class PlayerMovement : MonoBehaviour
-    {
-        [Header("Movement")]
+
+public class PhysicsMovemet : MonoBehaviour
+{
+    [Header("Movement")]
         [SerializeField] private float normalSpeed = 2f;
         [SerializeField] private float sprintSpeed = 10f;
 
